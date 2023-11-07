@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Work+Sans:wght@700&display=swap');
+
+body{
+   background-image: url("../img/background.png");
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    background: #ff778f;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ffbac4;
+    border-radius: 10px;
+    border: 3px solid #ffbac4;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+.inner{
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.round {
+   width: 250px; height: 250px;
+   border-radius: 50%;
+   background-size: auto 300px;
+   border: 4px solid #ffffff;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    margin-top: 35px
+}
+
+.info-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 450px;
+}
+
+.info__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.info__title{
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+.info__about{
+    left: 10px;
+    margin-top: 5px;
+    line-height: 35px;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.info__social__link{
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+.wrapper {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.wrapper i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgb(255, 133, 156);
+  transition: all ease-in-out 150ms;
+}
+
+.wrapper a:nth-child(1) {
+  color: #dd4b39;
+}
+
+.wrapper a:nth-child(2) {
+  color: #4867AA;
+}
+
+.wrapper a:nth-child(3) {
+  color: #1DA1F2;
+}
+
+.wrapper i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgb(255, 133, 156);
+}
+
+@media screen and (min-width: 780px) {
+    .info__about {
+        width: 40em;
+        transform: translate(7px, -25px);
+    }
+
+    .info__title {
+        font-size: 80px;
+    }
+}
+
+.fa{
+    color: white;
+    text-decoration: none;
+    padding-left: 10px
+}
