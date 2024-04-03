@@ -9,14 +9,13 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-    background: #ff778f;
+    background: #5d4c87;
     box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #ffbac4;
+    background: #e608ff;
     border-radius: 10px;
-    border: 3px solid #ffbac4;
 }
 
 h1{
@@ -80,7 +79,7 @@ h1{
     font-size: 18px;
     text-align: left;
     color: #ffffff;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .info__social__link{
@@ -97,25 +96,13 @@ h1{
 
 .wrapper i {
   padding: 10px;
-  text-shadow: 0px 6px 8px rgb(255, 133, 156);
+  text-shadow: 0px 6px 8px rgb(230, 119, 255);
   transition: all ease-in-out 150ms;
-}
-
-.wrapper a:nth-child(1) {
-  color: #dd4b39;
-}
-
-.wrapper a:nth-child(2) {
-  color: #4867AA;
-}
-
-.wrapper a:nth-child(3) {
-  color: #1DA1F2;
 }
 
 .wrapper i:hover {
   margin-top: -3px;
-  text-shadow: 0px 14px 10px rgb(255, 133, 156);
+  text-shadow: 0px 14px 10px rgb(255, 186, 255);
 }
 
 @media screen and (min-width: 780px) {
