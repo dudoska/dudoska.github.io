@@ -95,6 +95,16 @@ html {
     display: inline-block;
 }
 
+.social-buttons {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+.social-buttons a img {
+    width: 40px;
+    height: 40px;
+}
+
 .project {
     background-color: #2c2c2c;
     margin: 10px 0;
