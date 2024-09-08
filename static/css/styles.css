@@ -152,6 +152,29 @@ html {
     text-decoration: underline;
 }
 
+.status-yandex {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #222;
+    padding: 3px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.label {
+    background-color: #555;
+    color: white;
+    padding: 3px 10px;
+}
+
+.info {
+    background-color: #dbb952;
+    color: white;
+    padding: 3px 10px;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url(/static/OpenSans.ttf) format("woff2"), url(/static/OpenSans.ttf) format("woff");
