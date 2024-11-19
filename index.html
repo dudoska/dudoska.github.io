@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,87 +5,1518 @@
     <meta name="author" content="dudosa">
     <meta name="description" content="discord apps developer">
     <meta name="theme-color" content="#87ceeb">
-    <meta name="keywords" content="dudosa, dudosika, dudoska">
-
     <meta property="og:locale" content="en_EN">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dudosa.dev/">
     <meta property="og:title" content="@dudosa">
-    <meta property="og:image" content="./static/img/avatar.webp">
-    <meta property="og:image:type" content="image/png">
-
+    <meta property="og:image" content="/src/img/avatar.webp">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
     <title>dudosa</title>
-    <link rel="icon" href="./static/img/avatar.webp">
-
-    <link rel="stylesheet" href="./static/css/pro.min.css">
-    <link rel="stylesheet" href="./static/css/styles.css">
-
-    <script src="./static/js/timestamp.js" defer></script>
-    <script src="./static/js/yandex_info.js" defer></script>
-</head>
-
-<body>
-    <div class="container">
-        <div>
-            <div class="header">
-                <img src="./static/img/avatar.webp" alt="Profile Picture">
-            <h1>dudosa</h1>
-        </div>
-        <br>
-        <div class="status">
-            <img src="https://api.statusbadges.me/badge/status/679987861021655094?style=flat-square" alt="status">
-            <img src="https://api.statusbadges.me/badge/playing/679987861021655094?style=flat-square" alt="playing"><br>
-            <div class="status-yandex" id="yandex"><span class="label">listening to</span><span class="info">nothing rn</span></div>
-        </div>
-        </div>
-
-        <div class="content">
-            <h2>About Me</h2>
-            <h4><span class="code">👋</span> Hi, I`m Oleg • He/Him</h4>
-            <p align="left">⨯ Middle: Python, PostgreSQL</p>
-            <p align="left">⨯ Basic: HTML, CSS</p>
-            <p align="left">⨯ Favorite games: Portal, Undertale, CS2, Risk of Rain 2</p>
-            <p align="left">⨯ Birthday: <span id="timestamp"></span></p>
-
-            <h2>Social Media</h2>
-            <div class="social-buttons">
-            <a href="https://t.me/dudosika" target="_blank">
-                <img src="./static/img/telegram.png" alt="Telegram">
-            </a>
-            <a href="https://discord.com/users/679987861021655094" target="_blank">
-                <img src="./static/img/discord.svg" alt="Discord">
-            </a>
-            <a href="https://github.com/dudoska" target="_blank">
-                <img src="./static/img/github.svg" alt="GitHub">
-            </a>
-            <a href="https://steamcommunity.com/profiles/76561199020262616" target="_blank">
-                <img src="./static/img/steam.svg" alt="Steam">
-            </a>
-            <a href="mailto:me@dudosa.dev" target="_blank">
-               <img src="./static/img/mail.svg" alt="Mail">
-            </a>
+  </head>
+<body class="bg-background !opacity-100 transition-opacity duration-300" style="opacity: 0">
+    <div
+      class="!visible transition-opacity duration-150 bg-background text-foreground !opacity-100"
+      id="v0-container"
+      style="visibility: hidden; opacity: 0"
+    >
+      <footer
+        class="min-h-screen bg-[#0A0A0F] text-white selection:bg-purple-500/30"
+        data-id="1"
+      >
+        <div
+          class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-blue-500 origin-left z-50"
+          data-id="2"
+        ></div>
+        <section
+          class="relative min-h-screen flex items-center justify-center overflow-hidden px-4"
+          data-id="3"
+        >
+          <canvas id="particle-canvas"></canvas>
+          <div class="absolute inset-0" data-id="4">
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(124,58,237,0.1),transparent_50%)]"
+              data-id="5"
+            ></div>
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]"
+              data-id="6"
+            ></div>
+          </div>
+          <div
+            initial="[object Object]"
+            animate="[object Object]"
+            transition="[object Object]"
+            class="relative z-10 text-center max-w-4xl mx-auto"
+            data-id="7"
+          >
+            <div
+              class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8"
+              data-id="8"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"
+                data-id="9"
+                style="filter: blur(20px)"
+              ></div>
+              <img
+                alt="Profile"
+                class="relative w-full h-full rounded-full border-2 border-white/20 hover:border-purple-500 transition-colors duration-300"
+                data-id="10"
+                width="160"
+                height="160"
+                src="/src/img/avatar.webp"
+                style="aspect-ratio: 160 / 160; object-fit: cover"
+              />
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-spin-slow opacity-30"
+                data-id="11"
+              ></div>
             </div>
-
-            <h2>My Projects</h2>
-            <div class="project">
-                <div>
-                    <img src="./static/img/senko-bot.webp" alt="Project Picture"> </div>
-                <h3><a href="https://senko-bot.com/" target="_blank" rel="noopener">@Сэнко#5915</a></h3>
-                <p>This is a cute little fox that will help you banish darkness from your Discord server and lift your spirits!</p>
+            <h1
+              class="text-5xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500"
+              data-id="12"
+            >
+              <span class="inline-block hover:animate-float" data-id="13"
+                >d</span
+              ><span
+                class="inline-block hover:animate-float animation-delay-100"
+                data-id="14"
+                >u</span
+              ><span
+                class="inline-block hover:animate-float animation-delay-200"
+                data-id="15"
+                >d</span
+              ><span
+                class="inline-block hover:animate-float animation-delay-300"
+                data-id="16"
+                >o</span
+              ><span
+                class="inline-block hover:animate-float animation-delay-400"
+                data-id="17"
+                >s</span
+              ><span
+                class="inline-block hover:animate-float animation-delay-500"
+                data-id="18"
+                >a</span
+              >
+            </h1>
+            <p
+              class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto px-4"
+              data-id="19"
+            >
+              A dedicated software developer with a focus on building cross-platform apps,
+              robust Discord bots, and secure backend solutions. Values creating user-friendly,
+              secure, and scalable software.
+            </p>
+            <div class="flex gap-4 justify-center mb-12" data-id="20">
+              <div
+                initial="[object Object]"
+                animate="[object Object]"
+                transition="[object Object]"
+                data-id="21"
+              >
+                <a
+                  href="https://t.me/dudosika"
+                  style="border-radius: 0.5rem"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-purple-400"
+                  data-id="22"
+                >
+                  <img src="src/img/logos/telegram.svg" alt="Telegram">
+                  <span class="sr-only" data-id="24">Telegram</span>
+                </a>
+              </div>
+              <div
+                initial="[object Object]"
+                animate="[object Object]"
+                transition="[object Object]"
+                data-id="21"
+              >
+                <a
+                  href="https://discord.com/users/679987861021655094"
+                  style="border-radius: 0.5rem"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-violet-400"
+                  data-id="22"
+                >
+                  <img src="src/img/logos/discord.svg" alt="Discord">
+                  <span class="sr-only" data-id="24">Discord</span>
+                </a>
+              </div>
+              <div
+                 initial="[object Object]"
+                 animate="[object Object]"
+                 transition="[object Object]"
+                 data-id="21"
+              >
+                <a
+                  href="https://github.com/dudoska"
+                  style="border-radius: 0.5rem"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-violet-400"
+                  data-id="22"
+                >
+                  <img src="src/img/logos/github.svg" alt="Github">
+                  <span class="sr-only" data-id="24">Discord</span>
+                </a>
+              </div>
+              <div
+                initial="[object Object]"
+                animate="[object Object]"
+                transition="[object Object]"
+                data-id="21"
+              >
+                <a
+                  href="javascript:void(0);"
+                  style="border-radius: 0.5rem"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-violet-400"
+                  data-id="22"
+                  id="email-link"
+                >
+                  <img src="src/img/logos/email.svg" alt="Email">
+                  <span class="sr-only" data-id="24">Email</span>
+                </a>
+              </div>
             </div>
-            <div class="project">
-                <div>
-                    <img src="./static/img/bots.SD.C.webp" alt="Project Picture"> </div>
-                <h3><a href="https://bots.sdc.su/" target="_blank" rel="noopener">bots.SD.C</a></h3>
-                <p><b>[Moderator]</b> A public Discord bot monitoring site with a promotion system and the ability to add your own bot.</p>
+          </div>
+        </section>
+        <section
+          class="py-20 px-4 bg-gradient-to-b from-transparent to-purple-500/5"
+          data-id="27"
+        >
+          <div class="max-w-7xl mx-auto" data-id="28">
+            <div class="grid md:grid-cols-2 gap-12" data-id="29">
+              <div
+                initial="[object Object]"
+                whileinview="[object Object]"
+                transition="[object Object]"
+                class="space-y-8"
+                data-id="30"
+              >
+                <h2
+                  class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500"
+                  data-id="31"
+                >
+                  About Me
+                </h2>
+                <div class="space-y-6" data-id="32">
+                  <div
+                    class="rounded-lg border text-card-foreground shadow-sm bg-gray-900/50 border-gray-800"
+                    data-id="33"
+                    data-v0-t="card"
+                  >
+                    <div class="p-6" data-id="34">
+                      <div class="flex items-center gap-4 mb-6" data-id="35">
+                        <div
+                          class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center"
+                          data-id="36"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g fill="none">
+                              <path
+                                stroke="#c084fc"
+                                stroke-linecap="round"
+                                stroke-width="1.5"
+                                d="M8.784 22c-1.686-.752-3.078-1.924-3.993-3.493M14.825 2.186c1.677-.477 3.408-.023 4.617 1.211"
+                              />
+                              <path
+                                fill="#c084fc"
+                                d="m4.01 8.367l-.372-.652zm2.492.5l.648-.377zm-3.3 1.886l-.647.378zm4.495-7.38l.648-.378zm.842 1.443l-.648.378zm1.877 4.71a.75.75 0 0 0 1.296-.756zm-2.878 2.607a.75.75 0 1 0 1.296-.756zm-3.14-6.875l-.648.378zm7.44-2.327l.648-.378zm2.526 4.33l.648-.377zm1.683 2.888l.373.651a.75.75 0 0 0 .275-1.029zm1.616-4.773l-.648.378zm2.526 4.331l.648-.378zM6.99 17.25l.648-.378zm9.967 2.003l-.373-.65zM13.784 15.3a.75.75 0 0 0 1.296-.756zM4.383 9.018c.633-.362 1.257-.14 1.471.227L7.15 8.49c-.716-1.228-2.323-1.454-3.512-.775zm-.745-1.303c-1.19.681-1.803 2.182-1.083 3.416l1.296-.756c-.21-.36-.1-.996.532-1.357zM7.05 3.75l.842 1.444l1.296-.756l-.842-1.443zm.842 1.444l2.525 4.331l1.296-.755l-2.525-4.332zm.943 6.183L7.15 8.49l-1.296.755l1.684 2.888zM7.15 8.49L5.045 4.88l-1.295.756l2.104 3.61zM5.577 3.523c.634-.362 1.258-.14 1.472.227l1.296-.755C7.629 1.767 6.022 1.54 4.833 2.22zM4.833 2.22c-1.19.681-1.803 2.182-1.083 3.416l1.295-.756c-.21-.36-.099-.996.532-1.357zm6.357 1.088l2.526 4.332l1.296-.756l-2.526-4.331zm2.526 4.332l1.684 2.887l1.295-.756l-1.683-2.887zM9.719 3.08c.633-.361 1.257-.139 1.471.228l1.296-.755c-.716-1.228-2.323-1.454-3.512-.774zm-.745-1.3c-1.19.68-1.803 2.181-1.083 3.415l1.296-.756c-.21-.36-.1-.996.532-1.357zm8.041 3.975l2.526 4.331l1.296-.756L18.31 5zm-1.471-.228c.633-.362 1.257-.14 1.471.228l1.296-.756c-.716-1.227-2.323-1.453-3.512-.774zm-.745-1.302c-1.19.68-1.803 2.182-1.083 3.416l1.296-.756c-.21-.36-.1-.997.532-1.358zM2.555 11.131l3.788 6.497l1.296-.756l-3.788-6.497zm14.03 7.471c-3.367 1.924-7.337 1.029-8.946-1.73l-1.296.756c2.111 3.62 7.065 4.518 10.987 2.276zm2.956-8.517c1.605 2.753.41 6.594-2.956 8.517l.745 1.302c3.924-2.242 5.621-6.949 3.507-10.575zm-4.461 4.46c-.675-1.159-.203-2.863 1.34-3.745l-.745-1.302c-2.102 1.201-3.075 3.77-1.891 5.802z"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <div data-id="38">
+                          <h3
+                            class="text-xl font-semibold text-purple-400"
+                            data-id="39"
+                          >
+                            Oleg • He/Him
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        data-orientation="horizontal"
+                        role="none"
+                        class="shrink-0 h-[1px] w-full my-6 bg-gray-800"
+                        data-id="41"
+                      ></div>
+                      <div class="space-y-4" data-id="42">
+                        <div class="flex items-center gap-4" data-id="43">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="44"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 24 24"
+                            >
+                              <g fill="none">
+                                <path
+                                  stroke="#c084fc"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.5"
+                                  d="M12 7.5H7.5m4.5 9h4.5m0 0h1.521c.807 0 1.634-.188 2.13-.824c.531-.679 1.099-1.835 1.099-3.676c0-1.84-.568-2.997-1.098-3.676c-.497-.636-1.324-.824-2.13-.824H16.5m0 9v1.521c0 .807-.188 1.634-.824 2.13c-.679.531-1.835 1.099-3.676 1.099c-1.84 0-2.997-.568-3.676-1.098c-.636-.497-.824-1.324-.824-2.13V16.5m0-9H5.978c-.807 0-1.633.188-2.13.824c-.53.679-1.098 1.835-1.098 3.676c0 1.84.568 2.997 1.098 3.676c.497.636 1.323.824 2.13.824H7.5m0-9V5.978c0-.807.188-1.633.824-2.13c.679-.53 1.835-1.098 3.676-1.098c1.84 0 2.997.568 3.676 1.098c.636.497.824 1.323.824 2.13V7.5m-9 9V14a2 2 0 0 1 2-2h5a2 2 0 0 0 2-2V7.5"
+                                />
+                                <path
+                                  fill="#c084fc"
+                                  d="M15 18.5a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0m-6-13a.75.75 0 1 1 1.5 0a.75.75 0 0 1-1.5 0"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                          <div data-id="46">
+                            <p class="font-medium text-purple-400" data-id="47">
+                              Python
+                            </p>
+                            <p class="text-sm text-gray-400" data-id="48">
+                              Middle
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-4" data-id="43">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="44"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="#c084fc"
+                                d="M16.238 2a8.5 8.5 0 0 0-2.295.336l-.053.017a9 9 0 0 0-1.425-.138c-.982-.017-1.825.222-2.505.618c-.67-.232-2.06-.633-3.525-.553c-1.02.056-2.133.366-2.958 1.237c-.823.87-1.258 2.218-1.166 4.051c.025.506.17 1.331.408 2.4c.24 1.068.575 2.319.994 3.46s.879 2.166 1.596 2.863c.359.35.852.642 1.434.618c.408-.016.777-.195 1.095-.46c.155.204.321.294.472.376c.19.104.375.175.567.222c.344.086.933.2 1.623.083c.235-.039.483-.116.73-.225c.008.275.02.544.03.817c.034.863.056 1.66.315 2.36c.042.114.156.702.606 1.221s1.332.845 2.336.63c.708-.152 1.609-.425 2.207-1.277c.592-.842.859-2.05.911-4.008a4 4 0 0 1 .046-.28l.14.013h.017c.756.034 1.576-.073 2.261-.392c.607-.28 1.066-.565 1.4-1.069a1.07 1.07 0 0 0 .2-.536c.025-.26-.124-.666-.371-.854c-.496-.377-.808-.233-1.142-.164q-.496.109-1.002.122a19.2 19.2 0 0 0 2.049-4.871c.233-.9.364-1.73.375-2.456c.01-.726-.049-1.368-.484-1.924c-1.359-1.737-3.27-2.217-4.748-2.234h-.138zm-.039.533c1.399-.013 3.185.38 4.468 2.019c.288.368.374.906.364 1.57c-.01.662-.133 1.456-.357 2.325a18.7 18.7 0 0 1-2.415 5.406q.062.044.132.072c.242.1.793.186 1.892-.04c.276-.058.479-.097.689.063a.44.44 0 0 1 .152.354a.6.6 0 0 1-.108.28c-.212.319-.632.621-1.17.87c-.475.222-1.157.338-1.762.345a2.7 2.7 0 0 1-.821-.094l-.015-.006c-.092.883-.303 2.627-.44 3.423c-.11.642-.303 1.152-.67 1.534c-.367.381-.886.611-1.585.761c-.865.186-1.495-.014-1.902-.357c-.406-.341-.592-.794-.703-1.072c-.077-.192-.117-.44-.155-.772a17 17 0 0 1-.086-1.195q-.039-1.05-.025-2.102a2.55 2.55 0 0 1-1.293.633a3.4 3.4 0 0 1-1.393-.075a2 2 0 0 1-.433-.167c-.142-.076-.277-.162-.367-.331a.47.47 0 0 1-.048-.318a.5.5 0 0 1 .182-.276c.165-.134.383-.209.713-.277c.599-.123.808-.207.935-.308c.109-.087.231-.262.448-.519l-.002-.034a2.5 2.5 0 0 1-1.109-.298a37 37 0 0 0-1.542 1.743c-.327.392-.689.617-1.07.633s-.727-.176-1.02-.46c-.586-.57-1.054-1.549-1.461-2.655c-.407-1.107-.738-2.34-.973-3.39c-.236-1.05-.375-1.896-.395-2.305c-.087-1.735.319-2.904 1.014-3.641c.697-.738 1.652-1.017 2.583-1.07c1.67-.096 3.257.486 3.578.611c.619-.42 1.415-.681 2.41-.665c.473.007.943.068 1.401.182l.017-.007q.303-.107.616-.179a8 8 0 0 1 1.725-.209zm.127.559h-.122q-.718.01-1.42.16a6.24 6.24 0 0 1 2.375 1.875a7 7 0 0 1 .944 1.6q.136.332.188.55c.017.072.03.133.033.196a.3.3 0 0 1-.01.12l-.005.011c.025.73-.155 1.225-.177 1.922c-.017.505.112 1.098.144 1.746c.03.608-.043 1.276-.438 1.932l.095.12c1.045-1.646 1.798-3.466 2.2-5.019c.215-.836.329-1.593.339-2.193c.008-.6-.104-1.035-.246-1.217c-1.118-1.43-2.632-1.794-3.9-1.804m-3.992.213c-.985.003-1.691.3-2.227.746c-.553.46-.924 1.092-1.167 1.737A7.4 7.4 0 0 0 8.513 7.8l.01-.007a4.3 4.3 0 0 1 1.107-.43c.418-.095.87-.125 1.278.033s.745.53.868 1.096c.587 2.714-.182 3.723-.466 4.485q-.161.415-.276.844c.036-.008.072-.018.108-.022c.2-.016.357.05.45.09c.285.119.48.367.586.65q.042.113.06.237a.3.3 0 0 1 .016.106a46 46 0 0 0 .011 3.115c.02.448.048.843.083 1.155c.036.31.087.547.12.627c.106.267.262.616.544.854c.281.236.686.395 1.424.236c.64-.137 1.035-.328 1.3-.602c.262-.274.42-.656.52-1.24c.152-.875.455-3.413.492-3.89c-.017-.36.036-.637.151-.848a1 1 0 0 1 .46-.42c.08-.036.154-.06.214-.078a5 5 0 0 0-.202-.27a3.7 3.7 0 0 1-.555-.917a7 7 0 0 0-.214-.402c-.111-.2-.251-.45-.398-.731c-.293-.563-.612-1.244-.778-1.908c-.165-.664-.19-1.35.234-1.835c.375-.43 1.034-.608 2.022-.508c-.03-.087-.047-.16-.096-.277a6.5 6.5 0 0 0-.867-1.47c-.838-1.07-2.194-2.132-4.289-2.166h-.096zM6.8 3.348q-.159 0-.316.01c-.842.048-1.638.292-2.207.895c-.57.604-.945 1.593-.863 3.23c.015.31.15 1.179.382 2.21c.23 1.032.558 2.246.952 3.319s.871 2.006 1.325 2.447c.228.221.426.31.606.303c.181-.008.399-.113.665-.432q.726-.877 1.508-1.707a2.91 2.91 0 0 1-.973-2.625a10 10 0 0 0 .088-1.646c-.01-.444-.042-.739-.042-.923v-.025a8.2 8.2 0 0 1 .493-2.814c.233-.62.58-1.25 1.101-1.76c-.511-.168-1.42-.425-2.403-.473a6 6 0 0 0-.317-.009zM17.131 7.75c-.566.008-.883.153-1.05.344c-.236.271-.258.746-.112 1.331c.146.586.448 1.24.731 1.785c.142.273.28.518.39.717c.112.2.194.341.244.462a3 3 0 0 0 .148.302c.219-.463.258-.917.236-1.39c-.03-.586-.165-1.185-.145-1.792c.022-.709.162-1.17.175-1.719a5 5 0 0 0-.617-.04m-6.862.096a2.4 2.4 0 0 0-.513.062a4 4 0 0 0-.96.374q-.154.082-.292.19l-.018.016c.005.122.03.417.04.851c.01.475-.003 1.081-.094 1.737c-.2 1.425.835 2.605 2.05 2.607c.07-.293.187-.59.304-.902c.338-.912 1.004-1.577.443-4.172c-.091-.425-.273-.596-.523-.693a1.2 1.2 0 0 0-.437-.07m6.598.17h.041a.7.7 0 0 1 .15.018q.069.015.116.046a.14.14 0 0 1 .062.092v.006a.2.2 0 0 1-.03.113a.6.6 0 0 1-.092.125a.56.56 0 0 1-.321.177a.5.5 0 0 1-.342-.086a.5.5 0 0 1-.108-.099a.2.2 0 0 1-.053-.105a.14.14 0 0 1 .035-.107a.3.3 0 0 1 .098-.075a1.1 1.1 0 0 1 .444-.107zm-6.517.14q.066 0 .139.01c.127.018.24.052.327.102q.064.033.11.089q.026.029.038.066q.011.037.008.075a.25.25 0 0 1-.063.129a.5.5 0 0 1-.119.108a.53.53 0 0 1-.373.094a.6.6 0 0 1-.35-.19a.6.6 0 0 1-.099-.136a.23.23 0 0 1-.034-.148c.013-.09.087-.137.16-.162a.7.7 0 0 1 .255-.034zm7.55 6.12h-.002c-.123.044-.224.063-.309.1a.38.38 0 0 0-.199.178c-.052.096-.097.266-.084.555q.058.04.123.059c.143.043.382.071.649.067c.531-.006 1.186-.13 1.533-.291c.285-.133.55-.306.786-.513c-1.162.24-1.818.176-2.22.01a1.1 1.1 0 0 1-.277-.167zm-6.692.078h-.018c-.044.004-.108.019-.232.156c-.29.325-.392.53-.631.72c-.24.19-.55.292-1.171.42a1.6 1.6 0 0 0-.384.12c.024.02.021.024.058.043c.09.05.208.095.302.119c.266.066.705.144 1.162.066c.458-.078.934-.297 1.34-.866c.07-.098.077-.243.02-.4c-.059-.155-.186-.29-.276-.327a.6.6 0 0 0-.17-.05z"
+                              />
+                            </svg>
+                          </div>
+                          <div data-id="46">
+                            <p class="font-medium text-purple-400" data-id="47">
+                              PostgreSQL
+                            </p>
+                            <p class="text-sm text-gray-400" data-id="48">
+                              Middle
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-4" data-id="43">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="44"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15.75"
+                              height="21"
+                              viewBox="0 0 384 512"
+                            >
+                              <path
+                                fill="#c084fc"
+                                d="m0 32l34.9 395.8L191.5 480l157.6-52.2L384 32zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4l-97.9 27v.3h-1.1l-98.7-27.3l-6-75.8h47.7L138 320l53.5 14.5l53.7-14.5l6-62.2H84.3L71.5 112.2h241.1z"
+                              />
+                            </svg>
+                          </div>
+                          <div data-id="46">
+                            <p class="font-medium text-purple-400" data-id="47">
+                              HTML
+                            </p>
+                            <p class="text-sm text-gray-400" data-id="48">
+                              Basic
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-4" data-id="43">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="44"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 128 128"
+                            >
+                              <path
+                                fill="#c084fc"
+                                d="m8.76 1l10.055 112.883l45.118 12.58l45.244-12.626L119.24 1zm89.591 25.862l-3.347 37.605l.01.203l-.014.467v-.004l-2.378 26.294l-.262 2.336L64 101.607v.001l-.022.019l-28.311-7.888L33.75 72h13.883l.985 11.054l15.386 4.17l-.004.008v-.002l15.443-4.229L81.075 65H48.792l-.277-3.043l-.631-7.129L47.553 51h34.749l1.264-14H30.64l-.277-3.041l-.63-7.131L29.401 23h69.281z"
+                              />
+                            </svg>
+                          </div>
+                          <div data-id="46">
+                            <p class="font-medium text-purple-400" data-id="47">
+                              CSS
+                            </p>
+                            <p class="text-sm text-gray-400" data-id="48">
+                              Basic
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                initial="[object Object]"
+                whileinview="[object Object]"
+                transition="[object Object]"
+                class="space-y-8"
+                data-id="49"
+              >
+                <h2
+                  class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500"
+                  data-id="50"
+                >
+                  Interests
+                </h2>
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm bg-gray-900/50 border-gray-800 overflow-hidden"
+                  data-id="51"
+                  data-v0-t="card"
+                >
+                  <div class="p-6" data-id="52">
+                    <div
+                      initial="[object Object]"
+                      animate="[object Object]"
+                      exit="[object Object]"
+                      transition="[object Object]"
+                      class="min-h-[300px]"
+                      data-id="54"
+                    >
+                      <div class="flex items-center gap-4 mb-6" data-id="55">
+                        <div
+                          style="border-radius: 0.5rem"
+                          class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center"
+                          data-id="56"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="21"
+                            height="21"
+                            viewBox="0 0 14 14"
+                          >
+                            <g
+                              fill="none"
+                              stroke="#c084fc"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M7.929 3.286V1.5a1 1 0 0 0-1-1H1.5a1 1 0 0 0-1 1v5.429a1 1 0 0 0 1 1h1.786m3.785-1.858H12.5s1 0 1 1V12.5s0 1-1 1H7.071s-1 0-1-1V7.071s0-1 1-1"
+                              />
+                              <path
+                                d="M8.654 11.166a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5M3.221 3.505a.25.25 0 0 1 0-.5"
+                              />
+                              <path
+                                d="M3.22 3.505a.25.25 0 0 0 0-.5m7.699 6.1a.25.25 0 0 1 0-.5"
+                              />
+                              <path d="M10.918 9.105a.25.25 0 0 0 0-.5" />
+                            </g>
+                          </svg>
+                        </div>
+                        <div data-id="58">
+                          <h3
+                            class="text-xl font-semibold text-purple-400"
+                            data-id="59"
+                          >
+                            Gaming
+                          </h3>
+                          <p class="text-gray-400" data-id="60">
+                            My favorite games
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        data-orientation="horizontal"
+                        role="none"
+                        class="shrink-0 h-[1px] w-full my-6 bg-gray-800"
+                        data-id="61"
+                      ></div>
+                      <div
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                        data-id="62"
+                      >
+                        <div class="flex items-center gap-3" data-id="63">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="64"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="#c084fc"
+                                fill-rule="evenodd"
+                                d="M20.424 15.804a5.38 5.38 0 0 0 0-7.608S14.81 2.399 14.046 2.07c-.036-.015-.033-.028-.03-.039c.004-.02.007-.031-.31-.031a.86.86 0 0 0-.861.86v2.243c0 .475.385.86.86.86h.933c1.98 0 3.586 1.366 3.586 3.347v5.38c0 1.98-1.605 3.346-3.586 3.346h-.933a.86.86 0 0 0-.86.861v2.242a.86.86 0 0 0 1.2.79c.765-.328 6.38-6.125 6.38-6.125m-9.27-10.701V2.86a.86.86 0 0 0-1.2-.79c-.765.329-6.38 6.125-6.38 6.125a5.38 5.38 0 0 0 0 7.608s5.615 5.797 6.38 6.126a.86.86 0 0 0 1.2-.79v-2.243a.86.86 0 0 0-.86-.86h-.933c-1.98 0-3.586-1.366-3.586-3.347V9.31c0-1.98 1.605-3.346 3.586-3.346h.933a.86.86 0 0 0 .86-.861"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                          <p class="font-medium text-purple-400" data-id="66">
+                            Portal
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-3" data-id="63">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="64"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 48 48"
+                            >
+                              <g
+                                fill="#c084fc"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                              >
+                                <path
+                                  d="M18 14a3 3 0 0 1 5.939-.606a3.108 3.108 0 1 1-.024 1.319A3.001 3.001 0 0 1 18 14m3-1a1 1 0 1 0 0 2a1 1 0 0 0 0-2m4.856 1.11a1.107 1.107 0 1 1 2.214-.002a1.107 1.107 0 0 1-2.214.001"
+                                />
+                                <path
+                                  d="M16.615 17.348c0 2.035 1.385 2.487 1.847 2.487s.615 1.356.615 2.26c0 .776 1.921.887 3.923.902V24.5h-6.5c-2.892 0-4.268 2.146-4.882 3.923a11.7 11.7 0 0 0-.541 2.447a12 12 0 0 0-.077 1.1V32a1 1 0 0 0 2 0v-.05l.008-.18c.007-.16.023-.391.056-.671a9.7 9.7 0 0 1 .444-2.022c.51-1.474 1.384-2.577 2.992-2.577H23v1.209c-.834.047-1.65.156-2.365.33c-.5.121-.98.282-1.392.495c-.401.206-.82.502-1.091.936a1 1 0 0 0 1.696 1.06s.015-.023.066-.065s.13-.095.244-.153a4.4 4.4 0 0 1 .95-.33a11.3 11.3 0 0 1 1.892-.27v1.997c-.834.047-1.65.156-2.365.33c-.5.121-.98.282-1.392.495c-.401.206-.82.502-1.091.936a1 1 0 0 0 1.696 1.06s.015-.023.066-.065s.13-.095.244-.153a4.4 4.4 0 0 1 .95-.33a11.3 11.3 0 0 1 1.892-.27V36h-4c-1.108 0-1.939.527-2.513 1.24c-.549.68-.876 1.538-1.08 2.32C15 41.122 15 42.723 15 42.996V43a1 1 0 1 0 2 0c0-.241.002-1.63.343-2.935c.17-.656.406-1.204.701-1.57c.27-.335.564-.495.956-.495h10c.392 0 .686.16.956.495c.295.366.53.914.701 1.57c.34 1.305.343 2.694.343 2.935a1 1 0 1 0 2 0v-.004c0-.273 0-1.874-.407-3.436c-.204-.782-.531-1.64-1.08-2.32C30.939 36.527 30.108 36 29 36h-4v-2.287c.692.044 1.344.136 1.892.27c.403.097.722.212.95.33q.168.087.244.152c.05.042.066.065.066.065a1 1 0 0 0 1.696-1.06c-.271-.434-.69-.73-1.09-.936a6.4 6.4 0 0 0-1.393-.495a13.4 13.4 0 0 0-2.365-.33v-1.996c.692.044 1.344.136 1.892.27c.403.097.722.212.95.33q.168.087.244.152c.05.042.066.065.066.065a1 1 0 0 0 1.696-1.06c-.271-.434-.69-.73-1.09-.936a6.4 6.4 0 0 0-1.393-.495a13.4 13.4 0 0 0-2.365-.33V26.5h6.5c1.608 0 2.482 1.104 2.992 2.577a9.7 9.7 0 0 1 .444 2.022a10 10 0 0 1 .064.893v.009A1 1 0 0 0 37 32h-1c1 0 1-.002 1-.002v-.028l-.001-.051v-.015l-.009-.233c-.01-.196-.029-.472-.067-.801a11.7 11.7 0 0 0-.54-2.447c-.615-1.776-1.99-3.923-4.883-3.923H25v-1.503c2.002-.015 3.923-.126 3.923-.901c0-.905.577-2.261.616-2.261c.038 0 1.846-.453 1.846-2.487c0-.805.252-1.186.558-1.646C32.41 15 33 14.112 33 11.243c0-9.657-18-9.657-18 0c0 2.87.59 3.757 1.057 4.46c.306.46.558.84.558 1.645m2.08.498l-.01-.021c-.023-.054-.07-.198-.07-.477c0-1.484-.657-2.43-.968-2.877q-.078-.112-.12-.181c-.174-.292-.527-.931-.527-3.047c0-1.701.756-2.933 1.976-3.806C20.256 6.522 22.074 6 24 6s3.745.522 5.024 1.437C30.244 8.31 31 9.542 31 11.243c0 2.116-.353 2.755-.526 3.047q-.043.07-.121.18c-.31.447-.968 1.394-.968 2.878c0 .2-.042.293-.06.327a.4.4 0 0 1-.103.12a.7.7 0 0 1-.16.096l-.006.003a2 2 0 0 0-1.042.644a2 2 0 0 0-.301.461a5 5 0 0 0-.13.286a10 10 0 0 0-.517 1.619c-.795.093-1.882.096-3.066.096c-1.146 0-2.201-.003-2.99-.087a8 8 0 0 0-.111-.703a4 4 0 0 0-.403-1.128c-.171-.306-.722-1.13-1.802-1.236"
+                                />
+                              </g>
+                            </svg>
+                          </div>
+                          <p class="font-medium text-purple-400" data-id="66">
+                            Undertale
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-3" data-id="63">
+                          <div
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="64"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 512 512"
+                            >
+                              <path
+                                fill="#c084fc"
+                                d="m196.38 16.29l12.018 214.677l-69.382-213.75h-19.65l70.52 217.25c-17.16-18.22-34.434-44.74-52.243-80.246c18.864 62.058 35.573 139.067 40.552 192.04L19.38 62.393v38.277l144.89 258.98c-33.493-21.316-67.86-56.375-97.918-92.87c26.712 52.73 55.26 104.847 73.076 160.54L19.378 289.453v28.46l107.997 124.026C99 434.69 70.625 422.05 42.25 408.165c38.03 26.607 62.036 50.897 84.234 85.82H230.84l-6.785-91.082H197.77c0-44.845 2.87-108.728 40.767-115.86c-6.993-8.433-11.533-20.27-11.533-33.523c0-23.93 14.228-43.758 32.45-46.127h.005c.303-.038.61-.056.923-.063c.934-.02 1.895.063 2.83.063c19.957 0 36.205 20.602 36.205 46.128c0 12.928-4.304 24.595-10.996 32.99c41.4 6.42 40.496 71.424 40.496 116.394h-24.94l-6.003 91.082h90.96c19.418-30.77 60.864-56.727 96.524-75.234c-38.585 10.67-75.927 17.602-109.66 21.02l117.97-86.97v-23.218l-125.78 92.728c24.4-49.363 55.902-88.075 90.164-122.648c-40.56 27.323-73.25 37.7-107.027 43.785L493.77 158.7v-30.58L339.297 328.19c1.19-51.24 16.946-114.427 39.156-171.047c-17.383 25.054-33.876 46.073-49.713 62.742l56.406-202.668h-19.398l-53.412 191.906l3.832-192.834h-119.79z"
+                              />
+                            </svg>
+                          </div>
+                          <p class="font-medium text-purple-400" data-id="66">
+                            CS2
+                          </p>
+                        </div>
+                        <div class="flex items-center gap-3" data-id="63">
+                          <div
+                            style="border-radius: 0.5rem"
+                            class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center"
+                            data-id="64"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="21"
+                              height="21"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                fill="#c084fc"
+                                d="M21.458 11.005c-.024-.179-.078-.632-.165-1.08a8 8 0 0 0-.255-1.006l-.005-.015a2 2 0 0 0-.151-.315a1.2 1.2 0 0 0-.317-.354a1.57 1.57 0 0 0-1.412-.138a2.03 2.03 0 0 0-.861 1.064c-.238.465-.475.93-.742 1.378a2.6 2.6 0 0 1-.572.7a1.3 1.3 0 0 1-.367.215c-.534.2-.91-.08-1.321-.403c-.438-.342-.824-.744-1.274-1.073a1.85 1.85 0 0 0-.983-.43c-.637-.003-1.195.619-1.544 1.078c-.195.258-.577.779-.775 1.033a3.4 3.4 0 0 1-.454.458a1.2 1.2 0 0 1-.196.138a1.1 1.1 0 0 1-.48.136a1.57 1.57 0 0 1-.869-.263a3 3 0 0 1-.288-.183l-.035-.027a.469.469 0 0 0-.734.428a.4.4 0 0 0 .024.136l.004.008a.4.4 0 0 0 .093.14c.608.897 1.47 1.55 2.303 1.564a1.5 1.5 0 0 0 .635-.124c.646-.285 1.13-.903 1.67-1.334a1.3 1.3 0 0 1 .776-.33a1.04 1.04 0 0 1 .63.215a2 2 0 0 1 .189.144a9 9 0 0 1 .742.753a10 10 0 0 0 .9.85a2.53 2.53 0 0 0 1.146.56q.069.01.136.014a1.52 1.52 0 0 0 1.002-.314a4.2 4.2 0 0 0 .745-.689a6 6 0 0 0 .463-.664c.07-.112.143-.19.2-.308a6 6 0 0 1-.065.953a10 10 0 0 1-.212 1.288q-.062.253-.135.503q-.116.397-.262.786a2 2 0 0 1-.072.188l-.003.007q-.088.23-.192.453a7.005 7.005 0 0 1-12.74-.01q-.106-.225-.195-.459l-.004-.009a10.9 10.9 0 0 1 .426-9.024a13 13 0 0 1 1.635-2.396a8.4 8.4 0 0 1 2.132-1.946l.086-.055a4.17 4.17 0 0 1 4.57 0l.086.055a11.3 11.3 0 0 1 1.795 1.588l.002.002l.052.053a1.2 1.2 0 0 0 .296.212a1.36 1.36 0 0 0 1.493-.211a1.29 1.29 0 0 0 .137-1.672q-.063-.075-.121-.15a8 8 0 0 0-.722-.763A14 14 0 0 0 15.375.9l-.118-.071A6.1 6.1 0 0 0 12.118 0a5.75 5.75 0 0 0-3.033.841l-.117.071A12.2 12.2 0 0 0 6.003 3.39l-.024.025a15.48 15.48 0 0 0-3.578 9.8a16.6 16.6 0 0 0 .359 3.444a9.487 9.487 0 0 0 18.478.017l.028-.13l.002-.012l.02-.103a16 16 0 0 0 .286-2.235q.026-.454.026-.91a18 18 0 0 0-.142-2.28z"
+                              />
+                            </svg>
+                          </div>
+                          <p class="font-medium text-purple-400" data-id="66">
+                            Risk of Rain 2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="project">
-                <div>
-                    <img src="./static/img/weather-app.webp" alt="Project Picture"> </div>
-                <h3><a href="https://github.com/dudoska/WeatherApp" target="_blank" rel="noopener">WeatherApp</a></h3>
-                <p>WeatherApp is a convenient application for getting up-to-date weather information for any location worldwide.</p>
+          </div>
+        </section>
+        <section class="py-20 px-4 relative" data-id="67">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent"
+            data-id="68"
+          ></div>
+          <div class="max-w-7xl mx-auto relative" data-id="69">
+            <h2
+              initial="[object Object]"
+              whileinview="[object Object]"
+              transition="[object Object]"
+              class="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500"
+              data-id="70"
+            >
+              My Projects
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="71">
+              <div
+                initial="[object Object]"
+                whileinview="[object Object]"
+                transition="[object Object]"
+                data-id="72"
+              >
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm group relative bg-gray-900/50 border-gray-800 hover:bg-purple-500/5 transition-all duration-300 hover:-translate-y-2"
+                  data-id="73"
+                  data-v0-t="card"
+                >
+                  <div class="p-6" data-id="74">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                      data-id="75"
+                    ></div>
+                    <div class="relative" data-id="76">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-0.5 mb-6"
+                        data-id="77"
+                      >
+                        <div
+                          class="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center"
+                          data-id="78"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 72 72"
+                          >
+                            <path
+                              fill="#ffd8ca"
+                              d="M30.4 61C15.5 60 7.7 54.7.3 41.4c-.2-.3-.3-.7-.3-1h8.5v-3.8c0-4.9 3.9-8.8 8.8-8.8s8.8 3.9 8.8 8.8v16.3c0 3.3 1.7 6.3 4.3 8.1m33.1-20.6v-3.9c0-4.9-3.9-8.8-8.8-8.8c-4.8 0-8.7 3.8-8.8 8.5v16.7c0 3.4-1.7 6.3-4.3 8.1c14.9-1 22.7-6.2 30.1-19.5c.2-.3.3-.7.2-1.1z"
+                            />
+                            <path
+                              fill="#ff6f1f"
+                              d="M42.5 60.3c.1 0 .1-.1.2-.1l.6-.6l.2-.2c.2-.2.4-.5.6-.7l.1-.1c.2-.3.4-.6.6-1c.2-.3.3-.6.4-1c0-.1.1-.2.1-.3c.1-.2.2-.5.2-.7c0-.1.1-.2.1-.4c.1-.3.1-.5.1-.8c0-.1 0-.2.1-.3c0-.4.1-.8.1-1.1V36.1c.1-4.7 4-8.5 8.8-8.5c4.9 0 8.8 3.9 8.8 8.8v3.9H72c0-.4-.1-.8-.3-1.1c-2-3.7-4.1-7.2-6.3-10.4c1.6-1.2 2.9-2.8 4-4.6c3-5.2 2.8-11.3.1-16.2c-.2-.3-.5-.5-.9-.5c-5.5 0-10.4 3-13.4 8.2c-.4.6-.7 1.3-1 1.9c-5-2.9-10.8-4.6-18.2-4.6s-13.2 1.8-18.1 4.8c-.3-.7-.6-1.3-1-1.9c-3-5.2-7.9-8.2-13.4-8.2c-.4 0-.7.2-.9.5c-2.7 4.8-2.9 11 .1 16.2c1.1 1.8 2.4 3.3 4 4.6c-2.3 3-4.4 6.5-6.4 10.3c-.2.3-.3.7-.3 1.1h8.5v-3.8c0-4.9 3.9-8.8 8.8-8.8s8.8 3.9 8.8 8.8v16.3c0 .4 0 .8.1 1.1c0 .1 0 .2.1.3c0 .3.1.5.1.8c0 .1.1.2.1.4c.1.3.2.5.2.7c0 .1.1.2.1.3c.1.3.3.6.4 1c.2.3.4.7.6 1l.1.1c.2.3.4.5.6.7l.2.2l.6.6c.1 0 .1.1.2.1c.3.2.6.5.9.7c1.6 1.1 3.5 1.7 5.6 1.7s4-.6 5.6-1.7q.45-.15.9-.6"
+                            />
+                            <path
+                              fill="#2b3b47"
+                              d="M32.9 45.7h5.2c.6 0 1-.1 1-.1c1.2-.1 2.3.8 2.4 2.1c.1.6-.2 1.3-.6 1.7L39 51.5s-.4.4-1 .7c-.3.2-.6.3-1 .4c-.2.1-.4.1-.6.1h-1.2c-.2 0-.4-.1-.6-.1s-.4-.1-.5-.2c-.2 0-.3-.1-.5-.2c-.6-.3-1-.6-1-.6l-1.8-1.8c-.9-.9-.9-2.4 0-3.3c.8-.6 1.5-.9 2.1-.8m24.4-25.6c3.6-8 10-11.5 11.5-12.3v-.1h-1.5c-5.1.4-9.5 3.3-12.3 8.1c-.4.6-.7 1.3-1 1.9c1.2.8 2.3 1.5 3.3 2.4m-42.6 0c1.1-.9 2.3-1.8 3.6-2.5q-.3-1.05-.9-1.8c-3.1-5.2-8.6-8.1-14.2-8.1c-.1 0-.1.1 0 .2c1.5.6 7.9 4.2 11.5 12.2m25.5 38.1c-.2-1.1-1.2-3-4.2-3c-3.1 0-4.1 2.1-4.2 3.2c0 .2.1.5.3.6q.3.15.6 0s1.3-.6 3.3-.6s3.2.6 3.3.6s.2.1.3.1c.4 0 .7-.3.7-.7c-.1 0-.1-.1-.1-.2M22.1 42.7c0-.1-.1-.2-.1-.4c-.9-2-2.7-3.3-4.8-3.3s-3.9 1.3-4.8 3.3c-.1.1-.1.2-.1.4c-.3.6-.2 1.3.4 1.8c.3.3.6.4 1 .4s.8-.2 1.1-.5c.6-.7 1.5-1.1 2.4-1.1s1.8.4 2.4 1.1c.6.6 1.5.7 2.1.1c.6-.5.7-1.2.4-1.8m37.5 0c0-.1-.1-.2-.1-.4c-.9-2-2.7-3.3-4.8-3.3s-3.9 1.3-4.8 3.3c-.1.1-.1.2-.1.4c-.3.6-.2 1.3.4 1.8c.6.6 1.6.5 2.1-.1c.6-.7 1.5-1.1 2.4-1.1s1.8.4 2.4 1.1c.3.3.7.5 1.1.5s.7-.1 1-.4c.6-.5.7-1.2.4-1.8"
+                            />
+                            <path
+                              fill="#ffaf8f"
+                              d="M57.2 37.1c-.7 0-1.4-.1-2.1-.4c-1.6-.6-2.9-1.9-3.6-3.5c-.2-.6.1-1.2.6-1.5s1.2.1 1.5.6c.4 1 1.2 1.8 2.2 2.2s2.2.3 3.1-.2c.5-.3 1.2-.1 1.5.5s.1 1.2-.5 1.5c-.7.6-1.7.8-2.7.8m-42.4 0c-1 0-2-.2-2.9-.7c-.5-.3-.8-1-.5-1.5s1-.7 1.5-.5c.9.5 2.1.6 3.1.2s1.8-1.2 2.2-2.2c.2-.6.9-.9 1.5-.6c.6.2.9.9.6 1.5c-.6 1.6-1.9 2.9-3.6 3.5c-.5.2-1.2.3-1.9.3m2.3 12.5c-1.2 0-2.5-.3-3.6-.8c-.6-.3-.8-.9-.5-1.5s.9-.8 1.5-.5c1.7.8 3.8.8 5.5-.1c.6-.3 1.2 0 1.5.5c.3.6 0 1.2-.5 1.5q-1.8.9-3.9.9m37.5 0c-1.2 0-2.5-.3-3.6-.8c-.6-.3-.8-.9-.5-1.5s.9-.8 1.5-.5c1.7.8 3.8.8 5.5-.1c.6-.3 1.2 0 1.5.5c.3.6 0 1.2-.5 1.5q-1.8.9-3.9.9"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <h3
+                        class="text-xl font-bold mb-2 text-purple-400 group-hover:text-purple-300 transition-colors"
+                        data-id="80"
+                      >
+                        Сэнко
+                      </h3>
+                      <p class="text-gray-400 mb-4" data-id="81">
+                        A cute little fox that will help you banish darkness
+                        from your Discord server and lift your spirits!
+                      </p>
+                      <div class="flex flex-wrap gap-2 mb-4" data-id="82">
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Disnake
+                        </div>
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Python
+                        </div>
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Bot
+                        </div>
+                      </div>
+                      <a
+                        href="https://senko-bot.com/"
+                        class="inline-flex items-center btn-learn justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors p-0"
+                        data-id="84"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4 ml-2"
+                          data-id="85"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                initial="[object Object]"
+                whileinview="[object Object]"
+                transition="[object Object]"
+                data-id="72"
+              >
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm group relative bg-gray-900/50 border-gray-800 hover:bg-purple-500/5 transition-all duration-300 hover:-translate-y-2"
+                  data-id="73"
+                  data-v0-t="card"
+                >
+                  <div class="p-6" data-id="74">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                      data-id="75"
+                    ></div>
+                    <div class="relative" data-id="76">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-0.5 mb-6"
+                        data-id="77"
+                      >
+                        <div
+                          class="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center"
+                          data-id="78"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                          >
+                            <g fill="none">
+                              <path
+                                fill="url(#f2228idd)"
+                                d="M22.05 30H9.95C6.66 30 4 27.34 4 24.05V12.03C4 8.7 6.7 6 10.03 6h11.95C25.3 6 28 8.7 28 12.03v12.03c0 3.28-2.66 5.94-5.95 5.94"
+                              />
+                              <path
+                                fill="url(#f2228id0)"
+                                d="M4 12a6 6 0 0 1 6-6h2v24h-2a6 6 0 0 1-6-6z"
+                              />
+                              <path
+                                fill="url(#f2228id1)"
+                                d="M4 24h24a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6"
+                              />
+                              <path
+                                fill="url(#f2228ide)"
+                                d="M20 6h2a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6h-2z"
+                              />
+                              <path
+                                stroke="url(#f2228id2)"
+                                stroke-miterlimit="10"
+                                d="M3.5 3.95v9.1"
+                              />
+                              <path
+                                fill="url(#f2228id3)"
+                                d="M4 12v11c-1.1 0-2-.9-2-1.998v-7.004C2 12.9 2.9 12 4 12"
+                              />
+                              <path
+                                fill="url(#f2228id4)"
+                                d="M22.753 18.5H9.247A4.257 4.257 0 0 1 5 14.25A4.257 4.257 0 0 1 9.247 10h13.506A4.257 4.257 0 0 1 27 14.25c0 2.331-1.918 4.25-4.247 4.25"
+                              />
+                              <path
+                                fill="url(#f2228id5)"
+                                d="M18.528 26h-5.056C12.66 26 12 25.326 12 24.5s.66-1.5 1.472-1.5h5.056c.811 0 1.472.674 1.472 1.5s-.66 1.5-1.472 1.5"
+                              />
+                              <path
+                                fill="url(#f2228idf)"
+                                d="M3.5 5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
+                              />
+                              <path
+                                stroke="url(#f2228id6)"
+                                stroke-miterlimit="10"
+                                d="M28.5 4v9.09"
+                              />
+                              <path
+                                fill="url(#f2228idg)"
+                                d="M28.5 5.1a1.55 1.55 0 1 0 0-3.1a1.55 1.55 0 0 0 0 3.1"
+                              />
+                              <rect
+                                width="4.5"
+                                height="6"
+                                x="7"
+                                y="12"
+                                fill="url(#f2228idh)"
+                                rx="2"
+                              />
+                              <rect
+                                width="4.5"
+                                height="6"
+                                x="18.5"
+                                y="12"
+                                fill="url(#f2228idi)"
+                                rx="2"
+                              />
+                              <rect
+                                width="10"
+                                height="3"
+                                x="11"
+                                y="3"
+                                fill="url(#f2228id7)"
+                                rx="1.5"
+                              />
+                              <rect
+                                width="10"
+                                height="3"
+                                x="11"
+                                y="3"
+                                fill="url(#f2228idj)"
+                                rx="1.5"
+                              />
+                              <path
+                                fill="url(#f2228id8)"
+                                d="M28 22.94V11.93c1.1 0 2 .9 2 2v7.01c0 1.1-.9 2-2 2"
+                              />
+                              <rect
+                                width="2.5"
+                                height="5"
+                                x="9"
+                                y="12"
+                                fill="url(#f2228id9)"
+                                rx="1.25"
+                              />
+                              <rect
+                                width="2.5"
+                                height="5"
+                                x="9"
+                                y="12"
+                                fill="url(#f2228idk)"
+                                rx="1.25"
+                              />
+                              <rect
+                                width="2.5"
+                                height="5"
+                                x="20.5"
+                                y="12"
+                                fill="url(#f2228ida)"
+                                rx="1.25"
+                              />
+                              <rect
+                                width="2.5"
+                                height="5"
+                                x="20.5"
+                                y="12"
+                                fill="url(#f2228idl)"
+                                rx="1.25"
+                              />
+                              <g filter="url(#f2228idp)">
+                                <path
+                                  stroke="url(#f2228idb)"
+                                  stroke-width="0.25"
+                                  d="M3.625 5v6"
+                                />
+                              </g>
+                              <g filter="url(#f2228idq)">
+                                <path
+                                  stroke="url(#f2228idc)"
+                                  stroke-width="0.25"
+                                  d="M28.625 5v6"
+                                />
+                              </g>
+                              <ellipse
+                                cx="29"
+                                cy="13.5"
+                                fill="url(#f2228idm)"
+                                rx="1"
+                                ry="1.5"
+                              />
+                              <ellipse
+                                cx="29"
+                                cy="16.5"
+                                fill="url(#f2228idn)"
+                                rx="1"
+                                ry="4.5"
+                              />
+                              <path
+                                fill="url(#f2228ido)"
+                                fill-rule="evenodd"
+                                d="M19.776 3.025a1.5 1.5 0 0 1 1.199 1.2a1 1 0 1 1-1.2-1.2"
+                                clip-rule="evenodd"
+                              />
+                              <defs>
+                                <linearGradient
+                                  id="f2228id0"
+                                  x1="12"
+                                  x2="4"
+                                  y1="18"
+                                  y2="18"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#d5b2c0" stop-opacity="0" />
+                                  <stop offset="1" stop-color="#b4878d" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id1"
+                                  x1="16"
+                                  x2="16"
+                                  y1="27"
+                                  y2="31"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#b17edb" stop-opacity="0" />
+                                  <stop offset="1" stop-color="#a56bd6" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id2"
+                                  x1="4"
+                                  x2="4"
+                                  y1="3.95"
+                                  y2="13.05"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ea248a" />
+                                  <stop offset="1" stop-color="#df2232" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id3"
+                                  x1="3"
+                                  x2="3"
+                                  y1="12"
+                                  y2="23"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#e93273" />
+                                  <stop offset="1" stop-color="#d21844" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id4"
+                                  x1="15.998"
+                                  x2="15.998"
+                                  y1="17.701"
+                                  y2="11.391"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop offset=".006" stop-color="#443e75" />
+                                  <stop offset="1" stop-color="#2f1a3b" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id5"
+                                  x1="15.998"
+                                  x2="15.998"
+                                  y1="25.686"
+                                  y2="22.889"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop offset=".006" stop-color="#39325e" />
+                                  <stop offset="1" stop-color="#2b1831" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id6"
+                                  x1="29"
+                                  x2="29"
+                                  y1="4"
+                                  y2="13.09"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ea248a" />
+                                  <stop offset="1" stop-color="#df2232" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id7"
+                                  x1="16"
+                                  x2="14.5"
+                                  y1="3"
+                                  y2="6.5"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ffce2b" />
+                                  <stop offset="1" stop-color="#d9862d" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id8"
+                                  x1="29"
+                                  x2="29"
+                                  y1="11.93"
+                                  y2="22.94"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff30aa" />
+                                  <stop offset="1" stop-color="#ff2353" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228id9"
+                                  x1="11.5"
+                                  x2="9"
+                                  y1="14"
+                                  y2="14"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#29b6fe" />
+                                  <stop offset="1" stop-color="#1769a8" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228ida"
+                                  x1="23"
+                                  x2="20.5"
+                                  y1="14"
+                                  y2="14"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#29b6fe" />
+                                  <stop offset="1" stop-color="#1769a8" />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228idb"
+                                  x1="3.5"
+                                  x2="3.5"
+                                  y1="7"
+                                  y2="9"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff96cb" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#ff6db7"
+                                    stop-opacity="0"
+                                  />
+                                </linearGradient>
+                                <linearGradient
+                                  id="f2228idc"
+                                  x1="28.5"
+                                  x2="28.5"
+                                  y1="7"
+                                  y2="9"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff96cb" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#ff6db7"
+                                    stop-opacity="0"
+                                  />
+                                </linearGradient>
+                                <radialGradient
+                                  id="f2228idd"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="rotate(141.911 10.515 10.065)scale(23.5053)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#eeebf0" />
+                                  <stop offset=".493" stop-color="#d1bee3" />
+                                  <stop offset="1" stop-color="#d0bce2" />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228ide"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(5 -.5 1.9111 19.11108 25 13.5)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#f0eaf6" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#e7e0ef"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idf"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(-.5 2 -2 -.5 4 3)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff6c82" />
+                                  <stop offset=".441" stop-color="#ff2455" />
+                                  <stop offset="1" stop-color="#d9206c" />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idg"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="rotate(104.036 13.324 12.844)scale(2.13027)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff6c82" />
+                                  <stop offset=".441" stop-color="#ff2455" />
+                                  <stop offset="1" stop-color="#d9206c" />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idh"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(-2.5 .5 -.68428 -3.42136 9.5 15)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#322649" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#342950"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idi"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(-2.5 .5 -.68428 -3.42136 21 15)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#322649" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#342950"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idj"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(0 3 -10 0 16 4)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop
+                                    offset=".431"
+                                    stop-color="#ca7e29"
+                                    stop-opacity="0"
+                                  />
+                                  <stop offset="1" stop-color="#673f13" />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idk"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(0 2.5 -1.14393 0 11 13.5)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#54c8ff" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#54c8ff"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idl"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(0 2.5 -1.14393 0 22.5 13.5)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#54c8ff" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#54c8ff"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idm"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(0 1.5 -1 0 29 13.5)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff72c1" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#ff6ebf"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228idn"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="matrix(0 4.5 -.55944 0 29 16.5)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ff4b9c" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#ff73c1"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <radialGradient
+                                  id="f2228ido"
+                                  cx="0"
+                                  cy="0"
+                                  r="1"
+                                  gradientTransform="rotate(90 8 12)"
+                                  gradientUnits="userSpaceOnUse"
+                                >
+                                  <stop stop-color="#ffea60" />
+                                  <stop
+                                    offset="1"
+                                    stop-color="#ffef66"
+                                    stop-opacity="0"
+                                  />
+                                </radialGradient>
+                                <filter
+                                  id="f2228idp"
+                                  width="1.25"
+                                  height="7"
+                                  x="3"
+                                  y="4.5"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="BackgroundImageFix"
+                                    result="shape"
+                                  />
+                                  <feGaussianBlur
+                                    result="effect1_foregroundBlur_31_1501"
+                                    stdDeviation=".25"
+                                  />
+                                </filter>
+                                <filter
+                                  id="f2228idq"
+                                  width="1.25"
+                                  height="7"
+                                  x="28"
+                                  y="4.5"
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                >
+                                  <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                  />
+                                  <feBlend
+                                    in="SourceGraphic"
+                                    in2="BackgroundImageFix"
+                                    result="shape"
+                                  />
+                                  <feGaussianBlur
+                                    result="effect1_foregroundBlur_31_1501"
+                                    stdDeviation=".25"
+                                  />
+                                </filter>
+                              </defs>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <h3
+                        class="text-xl font-bold mb-2 text-purple-400 group-hover:text-purple-300 transition-colors"
+                        data-id="80"
+                      >
+                        bots.SD.C
+                      </h3>
+                      <p class="text-gray-400 mb-4" data-id="81">
+                        A public Discord bot monitoring site with a promotion
+                        system and the ability to add your own bot.
+                      </p>
+                      <div class="flex flex-wrap gap-2 mb-4" data-id="82">
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Moderator
+                        </div>
+                      </div>
+                      <a
+                        href="https://bots.sdc.su/"
+                        class="inline-flex items-center btn-learn justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors p-0"
+                        data-id="84"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4 ml-2"
+                          data-id="85"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                initial="[object Object]"
+                whileinview="[object Object]"
+                transition="[object Object]"
+                data-id="72"
+              >
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm group relative bg-gray-900/50 border-gray-800 hover:bg-purple-500/5 transition-all duration-300 hover:-translate-y-2"
+                  data-id="73"
+                  data-v0-t="card"
+                >
+                  <div class="p-6" data-id="74">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                      data-id="75"
+                    ></div>
+                    <div class="relative" data-id="76">
+                      <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 p-0.5 mb-6"
+                        data-id="77"
+                      >
+                        <div
+                          class="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center"
+                          data-id="78"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="42"
+                            height="42"
+                            viewBox="0 0 512 512"
+                          >
+                            <defs>
+                              <linearGradient
+                                id="meteoconsFogDayFill0"
+                                x1="96"
+                                x2="168"
+                                y1="-2.4"
+                                y2="122.3"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop offset="0" stop-color="#d4d7dd" />
+                                <stop offset=".5" stop-color="#d4d7dd" />
+                                <stop offset="1" stop-color="#bec1c6" />
+                              </linearGradient>
+                              <linearGradient
+                                id="meteoconsFogDayFill1"
+                                x2="168"
+                                y1="-50.4"
+                                y2="74.3"
+                                href="#meteoconsFogDayFill0"
+                              />
+                              <linearGradient
+                                id="meteoconsFogDayFill2"
+                                x1="150"
+                                x2="234"
+                                y1="119.2"
+                                y2="264.8"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop offset="0" stop-color="#fbbf24" />
+                                <stop offset=".5" stop-color="#fbbf24" />
+                                <stop offset="1" stop-color="#f59e0b" />
+                              </linearGradient>
+                              <symbol
+                                id="meteoconsFogDayFill3"
+                                viewBox="0 0 384 384"
+                              >
+                                <circle
+                                  cx="192"
+                                  cy="192"
+                                  r="84"
+                                  fill="url(#meteoconsFogDayFill2)"
+                                  stroke="#f8af18"
+                                  stroke-miterlimit="10"
+                                  stroke-width="12"
+                                />
+                                <path
+                                  fill="none"
+                                  stroke="#fbbf24"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  stroke-width="24"
+                                  d="M192 61.7V12m0 360v-49.7m92.2-222.5l35-35M64.8 319.2l35.1-35.1m0-184.4l-35-35m254.5 254.5l-35.1-35.1M61.7 192H12m360 0h-49.7"
+                                  transform="rotate(45 192 192)"
+                                />
+                              </symbol>
+                              <symbol
+                                id="meteoconsFogDayFill4"
+                                viewBox="0 0 264 72"
+                              >
+                                <path
+                                  fill="none"
+                                  stroke="url(#meteoconsFogDayFill0)"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  stroke-width="24"
+                                  d="M12 60h240"
+                                  transform="translate(-24 0)"
+                                />
+                                <path
+                                  fill="none"
+                                  stroke="url(#meteoconsFogDayFill1)"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  stroke-width="24"
+                                  d="M12 12h240"
+                                  transform="translate(24 0)"
+                                />
+                              </symbol>
+                              <clipPath id="meteoconsFogDayFill5">
+                                <path fill="none" d="M0 0h512v306H0z" />
+                              </clipPath>
+                            </defs>
+                            <g clip-path="url(#meteoconsFogDayFill5)">
+                              <use
+                                width="384"
+                                height="384"
+                                href="#meteoconsFogDayFill3"
+                                transform="translate(64 100)"
+                              />
+                            </g>
+                            <use
+                              width="264"
+                              height="72"
+                              href="#meteoconsFogDayFill4"
+                              transform="translate(124 336)"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <h3
+                        class="text-xl font-bold mb-2 text-purple-400 group-hover:text-purple-300 transition-colors"
+                        data-id="80"
+                      >
+                        WeatherApp
+                      </h3>
+                      <p class="text-gray-400 mb-4" data-id="81">
+                        WeatherApp is a convenient application for getting
+                        up-to-date weather information for any location
+                        worldwide.
+                      </p>
+                      <div class="flex flex-wrap gap-2 mb-4" data-id="82">
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          APP
+                        </div>
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Weather
+                        </div>
+                        <div
+                          class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+                          data-id="83"
+                          data-v0-t="badge"
+                        >
+                          Python
+                        </div>
+                      </div>
+                      <a
+                        href="https://github.com/dudoska/WeatherApp"
+                        class="inline-flex items-center btn-learn justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10 transition-colors p-0"
+                        data-id="84"
+                      >
+                        Learn More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-external-link w-4 h-4 ml-2"
+                          data-id="85"
+                        >
+                          <path d="M15 3h6v6"></path>
+                          <path d="M10 14 21 3"></path>
+                          <path
+                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </section>
+        <footer
+          class="py-8 px-4 text-center text-gray-400 relative overflow-hidden"
+          data-id="86"
+        >
+          <p
+            class="relative z-10"
+            initial="[object Object]"
+            animate="[object Object]"
+            transition="[object Object]"
+            data-id="87"
+          >
+            💜 Special thanks
+            <a
+              href="https://planetos.pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="relative inline-block text-purple-400 hover:text-purple-300 transition-colors"
+              whilehover="[object Object]"
+              whiletap="[object Object]"
+              data-id="89"
+              >planetus
+              <div
+                class="absolute -inset-2 bg-gradient-to-r from-purple-500 to-blue-500 opacity-0 group-hover:opacity-20 blur-lg -z-10"
+                animate="[object Object]"
+                transition="[object Object]"
+                data-id="90"
+              ></div
+            ></a>
+          </p>
+        </footer>
+      </footer>
+      </div>
     </div>
-</body>
+  </body>
+  <script src="src/js/particle-canvas.js"></script>
+  <script src="src/js/email-protection.js"></script>
 </html>
