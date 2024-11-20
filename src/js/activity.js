@@ -5,7 +5,6 @@ fetch(apiUrl)
     .then(data => {
         const status = document.getElementById('status');
         const statusCurrent = data.status;
-        console.log(statusCurrent)
         if (statusCurrent) {
             status.textContent = `Status: ${statusCurrent}`;
         }
