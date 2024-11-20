@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="dudosa">
     <meta name="description" content="discord apps developer">
-    <meta name="theme-color" content="#87ceeb">
+    <meta name="theme-color" content="#c084fc">
     <meta property="og:locale" content="en_EN">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dudosa.dev/">
@@ -13,7 +14,8 @@
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"/></noscript>
     <title>dudosa</title>
   </head>
 <body class="bg-background !opacity-100 transition-opacity duration-300" style="opacity: 0">
@@ -65,8 +67,6 @@
                 alt="Profile"
                 class="relative w-full h-full rounded-full border-2 border-white/20 hover:border-purple-500 transition-colors duration-300"
                 data-id="10"
-                width="160"
-                height="160"
                 src="/src/img/avatar.webp"
                 style="aspect-ratio: 160 / 160; object-fit: cover"
               />
@@ -124,7 +124,7 @@
                   class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-purple-400"
                   data-id="22"
                 >
-                  <img src="src/img/logos/telegram.svg" alt="Telegram">
+                  <img src="src/img/logos/telegram.svg" alt="telegram" width="18" height="18">
                   <span class="sr-only" data-id="24">Telegram</span>
                 </a>
               </div>
@@ -140,7 +140,7 @@
                   class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-violet-400"
                   data-id="22"
                 >
-                  <img src="src/img/logos/discord.svg" alt="Discord">
+                  <img src="src/img/logos/discord.svg" alt="discord" width="18" height="18">
                   <span class="sr-only" data-id="24">Discord</span>
                 </a>
               </div>
@@ -156,8 +156,8 @@
                   class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border h-10 w-10 bg-gray-900/50 border-gray-800 hover:border-purple-500 hover:bg-purple-500/10 transition-colors hover:text-violet-400"
                   data-id="22"
                 >
-                  <img src="src/img/logos/github.svg" alt="Github">
-                  <span class="sr-only" data-id="24">Discord</span>
+                  <img src="src/img/logos/github.svg" alt="github" width="18" height="18">
+                  <span class="sr-only" data-id="24">Github</span>
                 </a>
               </div>
               <div
@@ -173,7 +173,7 @@
                   data-id="22"
                   id="email-link"
                 >
-                  <img src="src/img/logos/email.svg" alt="Email">
+                  <img src="src/img/logos/email.svg" alt="email" width="18" height="18">
                   <span class="sr-only" data-id="24">Email</span>
                 </a>
               </div>
@@ -1517,6 +1517,85 @@
       </div>
     </div>
   </body>
-  <script src="src/js/particle-canvas.js"></script>
+  <script>
+    const canvas = document.getElementById("particle-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    const numberOfParticles = 50;
+    let mouse = { x: null, y: null, radius: 150 };
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x > canvas.width || this.x < 0) {
+          this.speedX = -this.speedX;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+          this.speedY = -this.speedY;
+        }
+
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < mouse.radius) {
+          const forceDirectionX = dx / distance;
+          const forceDirectionY = dy / distance;
+          const force = (mouse.radius - distance) / mouse.radius;
+          const directionX = forceDirectionX * force * this.size * 0.5;
+          const directionY = forceDirectionY * force * this.size * 0.5;
+          this.speedX -= directionX;
+          this.speedY -= directionY;
+        }
+      }
+      draw() {
+        ctx.fillStyle = "rgba(124, 58, 237, 0.3)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      particles = [];
+      for (let i = 0; i < numberOfParticles; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener("mousemove", function (event) {
+      mouse.x = event.x;
+      mouse.y = event.y;
+    });
+
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+  </script>
   <script src="src/js/email-protection.js"></script>
 </html>
