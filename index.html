@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+      body {
+        background-color: #0A0A0F;
+        color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #v0-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: bold;
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, #c084fc, #6366f1);
+      }
+
+      p {
+        font-size: 1rem;
+        color: #9CA3AF;
+      }
+
+      a {
+        color: #c084fc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #a855f7;
+      }
+
+      .btn-learn {
+        padding: 1;
+        transition: all 0.4s ease;
+      }
+
+      .btn-learn:hover {
+        padding: 0 14px;
+      }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="dudosa">
@@ -12,6 +59,7 @@
     <meta property="og:title" content="@dudosa">
     <meta property="og:image" content="/src/img/avatar.webp">
     <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
