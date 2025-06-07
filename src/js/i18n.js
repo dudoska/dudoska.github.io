@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Ошибка загрузки переводов:', error));
 });
 
-
 function changeLanguage(language) {
     i18next.changeLanguage(language, (err) => {
         if (err) {
@@ -62,10 +61,9 @@ function updateContent() {
         music: 'music',
         'music-description': 'music-description',
         'favorite-track': 'favorite-track',
-        'favorite-musician': 'favorite-musician',
-        'minutes-with-music': 'minutes-with-music',
+        'favorite-artists': 'favorite-artists',
+        'play-count': 'play-count',
         'favorite-genre': 'favorite-genre',
-        'pop-punk': 'pop-punk',
         'my-projects': 'my-projects',
         'senko-description': 'senko-description',
         'bots.SDC.C-description': 'bots.SDC.C-description',

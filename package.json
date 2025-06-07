@@ -1,0 +1,21 @@
+{
+  "name": "dudoska.github.io",
+  "version": "07.06.2025",
+  "description": "My portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dudoska/dudoska.github.io.git"
+  },
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "nodemon": "^3.1.10",
+    "redis": "^5.5.6"
+  }
+}
